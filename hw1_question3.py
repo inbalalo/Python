@@ -32,7 +32,7 @@ def compare_subjects_within_student(subj1_all_students, subj2_all_students):
             else:
                 d[str(subj2_all_students[i][0])] = 'subj1'
     
-    return d
+    print(d)
 
 
 if __name__ == '__main__':
