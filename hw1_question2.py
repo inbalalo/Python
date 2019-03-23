@@ -1,11 +1,17 @@
-def is_identical(list):
+def is_palindrome(number):
     """
-    Runs through a given list of pairs of digits and returns True if all pairs on the list are identical.
+    Compares the first and the last index of a string argument.
+    If they are equal, the function recursively calls herself with a smaller argument. If not, 'False' is returned.
+    It returns 'True' when there's nothing else to compare.
     """
-    for i in range(0, len(list):
-        if list[i][0] != list[i][1]:
+    if len(number) <= 1:
+        return True
+    else:
+        if number[0] == number[-1]:
+            return is_palindrome(number[1:-1])
+        else:
             return False
-    return True
+
 
 def check_palindrome():
    """
@@ -14,19 +20,19 @@ def check_palindrome():
 
    Note: It should print out the first number (with a palindrome in its last 4 digits),
    not all 4 "versions" of it.
-   """ 
+   """
    for number in range(100000, 1000000):
-       if is_identical([[number[2],number[5]], [number[3], number[4]]):
-           a = number+1
-           if is_identical([[a[1], a[5]], [a[2], a[4]]):
-               a = a+1
-               if is_identical([[a[1], a[5]], [a[2], a[4]]]):
-                   a = a+1
-                   if is_identical([a[0], a[5]], [a[1],a[4]], [a[2], a[3]]):
+       str_num = str(number)
+       if is_palindrome(str_num[2:]):
+           str_num = str(number+1)
+           if is_palindrome(str_num[1:]):
+               str_num = str(number+2)
+               if is_palindrome(str_num[1:5]):
+                   str_num = str(number+3)
+                   if is_palindrome(str_num):
                        print(number)
 
 if __name__ == '__main__':
     # Question 2
     return_value = check_palindrome()
     print(f"Question 2 solution: {return_value}")                       
-

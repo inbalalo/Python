@@ -13,6 +13,6 @@ def trifeca(word):
 
 if __name__ == '__main__':
     # Question 1
-    param1 = 'fgaabbccgh'
+    param1 = 'hjjkaabbccgh'
     return_value = trifeca(param1)
     print(f"Question 1 solution: {return_value}")
