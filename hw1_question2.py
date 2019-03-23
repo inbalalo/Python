@@ -2,7 +2,7 @@ def is_palindrome(number):
     """
     Compares the first and the last index of a string argument.
     If they are equal, the function recursively calls herself with a smaller argument. If not, 'False' is returned.
-    It returns 'True' when there's nothing else to compare.
+    It returns 'True' when there's nothing left to compare.
     """
     if len(number) <= 1:
         return True
